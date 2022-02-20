@@ -14,7 +14,7 @@ func CreateObservable() *Observable {
 
 func (o *Observable) Notify(event Event) {
 	for _, eventHandler := range o.eventHandlerGroups[event.Action()] {
-		eventHandler.callback(event)
+		eventHandler.Callback(event)
 	}
 }
 

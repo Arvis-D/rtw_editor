@@ -2,5 +2,5 @@ package observer
 
 type EventHandler struct {
 	Action   string
-	callback func(event Event)
+	Callback func(event Event)
 }
