@@ -2,8 +2,8 @@ package main
 
 import (
 	"arvis/rtw/common/context"
-	"arvis/rtw/common/interfaces"
 	"arvis/rtw/common/observer"
+	"arvis/rtw/common/ui"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
@@ -32,7 +32,7 @@ func (a *App) Context() *context.Context {
 	return a.context
 }
 
-func (a *App) Run(mainFragment interfaces.Fragment) {
+func (a *App) Run(mainFragment ui.Fragment) {
 	a.mainWindow.SetMaster()
 	a.mainWindow.SetContent(mainFragment.View())
 	a.mainWindow.Show()
